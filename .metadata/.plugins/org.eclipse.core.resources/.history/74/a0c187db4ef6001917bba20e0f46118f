@@ -1,0 +1,12 @@
+package lab4.tema.P7;
+
+public class TestPr07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ClasaExterioara cx=new ClasaExterioara();
+
+	}
+
+}

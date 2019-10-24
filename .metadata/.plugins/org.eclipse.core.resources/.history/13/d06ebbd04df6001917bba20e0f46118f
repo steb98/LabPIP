@@ -1,0 +1,5 @@
+package lab4.tema.P7;
+
+public class ClasaIn extends ClasaExterioara {
+
+}

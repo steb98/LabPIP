@@ -1,0 +1,5 @@
+package lab4.tema.P6;
+
+public interface Interf4 implements Interf2, Interf3 {
+	void metoda4();
+}
