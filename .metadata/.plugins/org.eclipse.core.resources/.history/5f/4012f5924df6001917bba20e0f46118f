@@ -1,7 +1,0 @@
-package lab4.tema.P7;
-
-public class ClasaExterioara {
-	public ClasaExterioara() {
-		System.out.println("Constr. ClasaExt");
-	}
-}

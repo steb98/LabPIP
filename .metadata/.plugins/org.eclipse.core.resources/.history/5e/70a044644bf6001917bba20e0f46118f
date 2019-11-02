@@ -1,5 +1,0 @@
-package lab4.tema.P6;
-
-public interface Interf2 extends Interf1 {
-	void metoda2();
-}

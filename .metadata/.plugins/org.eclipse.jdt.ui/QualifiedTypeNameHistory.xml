@@ -3,4 +3,7 @@
     <fullyQualifiedTypeName name="lab4.tema.P7.ClasaExterioara"/>
     <fullyQualifiedTypeName name="lab4.tema.P7.ClasaExterioara.ClasaIn"/>
     <fullyQualifiedTypeName name="lab4.tema.P7.ClasaExterioara.ClasaInStatica"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.BitSet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
