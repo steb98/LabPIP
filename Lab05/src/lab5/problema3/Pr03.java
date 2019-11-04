@@ -10,7 +10,7 @@ public class Pr03 {
 			studentList.add(new Student("Studentul nr "+i));
 	}
 		
-		for(int i=1;i<19;i++){
+		for(int i=1;i<studentList.size();i++){
 			System.out.println(studentList.get(i).NumePrenume);
 		}
 }
