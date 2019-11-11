@@ -14,7 +14,7 @@ public class ClasaA {
 		} catch (MyException e) {
 			
 			
-			throw new MyException();
+			throw e;
 		}
 	}
 	static void g() throws MyException {
