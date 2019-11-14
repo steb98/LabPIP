@@ -1,12 +1,10 @@
-package lab07.problema02;
+package lab07.problema2bis;
 
 public class Pr02 {
 
 	public static void main(String[] args) {
-		GUI g = new GUI();
-		g.init();
-		
-		
+		// TODO Auto-generated method stub
+
 	}
 
 }
