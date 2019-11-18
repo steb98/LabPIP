@@ -1,6 +1,0 @@
-INDEX VERSION 1.127+D:\work\1304B\BogheanStefan\LabPIP\.metadata\.plugins\org.eclipse.jdt.core
-4291953834.index
-1639354633.index
-380739999.index
-2411261989.index
-2295673916.index
