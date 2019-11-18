@@ -170,7 +170,7 @@ public class GUI {
 			remember = accumulator;
 			accumulator = 0;
 			accumulatorContainer.setText(""+accumulator);
-			opSet = "-";
+			opSet = "/";
 			break;
 		case "+/-":
 			accumulator=-accumulator;
@@ -218,6 +218,7 @@ public class GUI {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String cmd = e.getActionCommand();
+			System.out.println(cmd);
 			switch (cmd) {
 			case "1":
 				addDigitInAcc(cmd);
