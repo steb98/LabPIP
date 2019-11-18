@@ -17,6 +17,8 @@ import javax.swing.JButton;
 public class Prb01 {
 	
 	JMenuBar menuBar2 = new JMenuBar();
+	JMenuBar menuBar = new JMenuBar();
+	boolean a = true;
 	private JFrame frame;
 
 	/**
@@ -65,7 +67,7 @@ public class Prb01 {
 		
 		
 		
-		JMenuBar menuBar = new JMenuBar();
+		
 		frame.setJMenuBar(menuBar);
 		
 		JMenu mnSemnalIntrare = new JMenu("Semnal Intrare");
@@ -166,6 +168,7 @@ public class Prb01 {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String cmd = e.getActionCommand();
+			
 			System.out.println(cmd);
 			switch (cmd) {
 			
@@ -181,7 +184,15 @@ public class Prb01 {
 				textField.setText("Semnal :"+cmd);
 				break;
 			case "Comuta Meniu":
-				frame.setJMenuBar(menuBar2);
+				if(a==true) {
+					frame.setJMenuBar(menuBar2);
+					a=!a;
+				}
+				else {
+					frame.setJMenuBar(menuBar);
+					a=!a;
+				}
+					
 				frame.validate();
 				break;
 			default:

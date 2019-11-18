@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+D:\Facultate\An III\SEM I eu\PIP\git clone\LabPIP\.metadata\.plugins\org.eclipse.jdt.core
+380739999.index
+2295673916.index
+1639354633.index
+4291953834.index
+2411261989.index
+4173316275.index
+1744887074.index

@@ -1,0 +1,208 @@
+package problema1;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JRadioButton;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class Prb01 {
+	
+	JMenuBar menuBar2 = new JMenuBar();
+	JMenuBar menuBar = new JMenuBar();
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Prb01 window = new Prb01();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Prb01() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(166, 168, 150, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		textField.setEditable(false);
+		
+		JButton btnComutaMeniu = new JButton("Comuta Meniu");
+		btnComutaMeniu.setBounds(22, 167, 125, 23);
+		btnComutaMeniu.addActionListener(apasare);
+		frame.getContentPane().add(btnComutaMeniu);
+		
+		
+		
+		
+		
+		frame.setJMenuBar(menuBar);
+		
+		JMenu mnSemnalIntrare = new JMenu("Semnal Intrare");
+		menuBar.add(mnSemnalIntrare);
+		
+		JMenuItem itemDirac = new JMenuItem("Impuls Dirac");
+		mnSemnalIntrare.add(itemDirac);
+		itemDirac.addActionListener(apasare);
+		
+		JMenuItem itemTreapta = new JMenuItem("Treapta");
+		mnSemnalIntrare.add(itemTreapta);
+		itemTreapta.addActionListener(apasare);
+		
+		JMenuItem itemSinusoidal = new JMenuItem("Sinusoidal");
+		mnSemnalIntrare.add(itemSinusoidal);
+		itemSinusoidal.addActionListener(apasare);
+		
+		JMenu mnTipSistem = new JMenu("Tip Sistem");
+		menuBar.add(mnTipSistem);
+		
+		JMenuItem itemOrdinI = new JMenuItem("Ordin I");
+		mnTipSistem.add(itemOrdinI);
+		itemOrdinI.addActionListener(apasare);
+		
+		JMenuItem itemOrdinII = new JMenuItem("Ordin II");
+		mnTipSistem.add(itemOrdinII);
+		itemOrdinII.addActionListener(apasare);
+		
+		
+		
+		
+		
+		
+		
+		JMenu menuForma = new JMenu("Forma");
+		menuBar2.add(menuForma);
+		
+		JMenuItem itemLinie = new JMenuItem("Linie");
+		JMenuItem itemDreptunghi = new JMenuItem("Dreptunghi");
+		JMenuItem itemCerc = new JMenuItem("Cerc");
+		itemLinie.addActionListener(apasare);
+		itemDreptunghi.addActionListener(apasare);
+		itemCerc.addActionListener(apasare);
+		
+		menuForma.add(itemLinie);
+		menuForma.add(itemDreptunghi);
+		menuForma.add(itemCerc);
+		
+		JMenu menuDimensiune = new JMenu("Dimensiune");
+		menuBar2.add(menuDimensiune);
+		
+		JMenu menuDimensiune1 = new JMenu("Dimensiune 1");
+		JMenu menuDimensiune2 = new JMenu("Dimensiune 2");
+		
+		ButtonGroup  bg1= new ButtonGroup();
+		JRadioButtonMenuItem btn1 = new JRadioButtonMenuItem("1");
+		JRadioButtonMenuItem btn2 = new JRadioButtonMenuItem("2");
+		JRadioButtonMenuItem btn5 = new JRadioButtonMenuItem("5");
+		btn1.addActionListener(apasare);
+		btn2.addActionListener(apasare);
+		btn5.addActionListener(apasare);
+		bg1.add(btn1);
+		bg1.add(btn2);
+		bg1.add(btn5);
+		
+		
+		ButtonGroup  bg2= new ButtonGroup();
+		JRadioButtonMenuItem btn10 = new JRadioButtonMenuItem("10");
+		JRadioButtonMenuItem btn25 = new JRadioButtonMenuItem("25");
+		JRadioButtonMenuItem btn50 = new JRadioButtonMenuItem("50");
+		btn10.addActionListener(apasare);
+		btn25.addActionListener(apasare);
+		btn50.addActionListener(apasare);
+		
+		bg1.add(btn10);
+		bg1.add(btn25);
+		bg1.add(btn50);
+		
+		menuDimensiune1.add(btn1);
+		menuDimensiune1.add(btn2);
+		menuDimensiune1.add(btn5);
+		
+		menuDimensiune2.add(btn10);
+		menuDimensiune2.add(btn25);
+		menuDimensiune2.add(btn50);
+		
+		menuDimensiune.add(menuDimensiune1);
+		menuDimensiune.add(menuDimensiune2);
+				
+		
+		
+		
+		
+		
+	}
+	ActionListener apasare = new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String cmd = e.getActionCommand();
+			boolean a = true;
+			System.out.println(cmd);
+			switch (cmd) {
+			
+			case "Impuls Dirac":
+				textField.setText("Semnal :"+cmd);
+				break;
+				
+			case "Treapta":
+				textField.setText("Semnal :"+cmd);
+				break;
+				
+			case "Sinusoidal":
+				textField.setText("Semnal :"+cmd);
+				break;
+			case "Comuta Meniu":
+				if(a==true) {
+					frame.setJMenuBar(menuBar2);
+					a=!a;
+				}
+				else {
+					frame.setJMenuBar(menuBar);
+					a=!a;
+				}
+					
+				frame.validate();
+				break;
+			default:
+				textField.setText("Sistem de ordin :"+cmd);
+				break;
+			}
+			
+			
+		}
+	};
+	private JTextField textField;
+	
+	
+}
